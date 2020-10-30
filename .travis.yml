@@ -1,11 +1,9 @@
-sudo: required
-
 language: generic
-
+sudo: required
 services:
   - docker
 
-  
+
 before_install:
   - docker build -t kpkp00014/vsc-test-app -f ./frontend/Dockerfile.dev ./frontend
 
@@ -30,7 +28,7 @@ after_success:
     app: "video-scroll-capture"
     env: "VideoScrollCapture-env"
     bucket_name: elasticbeanstalk-ap-northeast-2-398861201433
-    bucket_path: "docker-fullstack-app"
+    bucket_path: "video-sroll-capture"
     on:
       branch: master
   

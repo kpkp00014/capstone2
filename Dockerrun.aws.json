@@ -1,0 +1,27 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [{
+        "name": "frontend",
+        "image": "kpkp00014/vsc-frontend",
+        "hostname": "frontend",
+        "essential": false,
+        "memory": 128
+    }, {
+        "name": "backend",
+        "image": "kpkp00014/vsc-backend",
+        "hostname": "backend",
+        "essential": false,
+        "memory": 128
+    }, {
+        "name": "nginx",
+        "image": "kpkp00014/vsc-nginx",
+        "hostname": "nginx",
+        "essential": true,
+        "portMappings": [{
+            "hostPort": 80,
+            "containerPort": 80
+        }],
+        "links": ["frontend", "backend"],
+        "memory": 128
+    }]
+}
