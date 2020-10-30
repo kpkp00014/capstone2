@@ -1,4 +1,4 @@
-FROM node:12.18.0 as builder
+FROM node:12.18.0
 WORKDIR /app
 RUN  apt-get update \
     && apt-get install -y wget gnupg ca-certificates \
