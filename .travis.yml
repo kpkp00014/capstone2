@@ -31,7 +31,7 @@ deploy:
   bucket_name: elasticbeanstalk-ap-northeast-2-398861201433
   bucket_path: "video-sroll-capture"
   on:
-    branch: master
+    branch: main
 
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_ACCESS_KEY
