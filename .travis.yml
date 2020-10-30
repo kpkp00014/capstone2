@@ -23,6 +23,7 @@ after_success:
   - docker push kpkp00014/vsc-backend
   - docker push kpkp00014/vsc-nginx
 
+  
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
