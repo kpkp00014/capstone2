@@ -28,7 +28,7 @@ deploy:
   region: "ap-northeast-2"
   app: "video-scroll-capture"
   env: "VideoScrollCapture-env"
-  bucket_name: elasticbeanstalk-ap-northeast-2-398861201433
+  bucket_name: "elasticbeanstalk-ap-northeast-2-398861201433"
   bucket_path: "video-sroll-capture"
   on:
     branch: main
