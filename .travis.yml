@@ -32,6 +32,6 @@ deploy:
   bucket_path: "video-scroll-capture-app"
   on:
     branch: main
-
+  label: "vsc-app"
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_ACCESS_KEY
