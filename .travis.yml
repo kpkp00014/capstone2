@@ -7,11 +7,11 @@ services:
 
 before_install:
   - docker build -t kpkp00014/vsc-test-app -f ./frontend/Dockerfile.dev ./frontend
- 
+
 script:
   - docker run -e CI=true kpkp00014/vsc-test-app npm run test
-  
-  after_success:
+
+after_success:
   - echo "start Creating an image with dockerfile"
   - docker build -t kpkp00014/vsc-frontend ./backend
   - docker build -t kpkp00014/vsc-backend ./frontend
