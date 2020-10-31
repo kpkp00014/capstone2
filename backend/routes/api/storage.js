@@ -37,6 +37,8 @@ router.get("/", auth, (req, res) => {
 // @access  Public
 router.post("/upload", auth, uploadS3.single("file"), (req, res) => {
   try {
+    console.log("업로드 시도");
+    console.log(AWS_KEY.length, "AWSKEY length");
     res.json({ uploaded: true });
   } catch (e) {
     console.error(e);
