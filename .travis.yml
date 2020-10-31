@@ -13,15 +13,15 @@ script:
 
 after_success:
   - echo "start Creating an image with dockerfile"
-  - docker build -t kpkp00014/vsc-frontend:1.1 ./frontend
-  - docker build -t kpkp00014/vsc-backend:1.1 ./backend
-  - docker build -t kpkp00014/vsc-nginx:1.1 ./nginx
+  - docker build -t kpkp00014/vsc-frontend:1.2 ./frontend
+  - docker build -t kpkp00014/vsc-backend:1.2 ./backend
+  - docker build -t kpkp00014/vsc-nginx:1.2 ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
-  - docker push kpkp00014/vsc-frontend:1.1
-  - docker push kpkp00014/vsc-backend:1.1
-  - docker push kpkp00014/vsc-nginx:1.1
+  - docker push kpkp00014/vsc-frontend:1.2
+  - docker push kpkp00014/vsc-backend:1.2
+  - docker push kpkp00014/vsc-nginx:1.2
 
 deploy:
   provider: elasticbeanstalk
