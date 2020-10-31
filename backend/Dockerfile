@@ -18,4 +18,4 @@ RUN  apt-get update \
 COPY ./package.json ./
 RUN npm install
 COPY . .
-RUN node server.js
+CMD ["node", "server.js"]
