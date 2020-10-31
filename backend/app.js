@@ -14,8 +14,6 @@ import storageRoutes from "./routes/api/storage";
 const app = express();
 const { MONGO_URI } = config;
 
-const prod = process.env.NODE_ENV === "projuction";
-
 //서버의 보안을 보완해줌
 app.use(hpp());
 app.use(helmet());
@@ -41,9 +39,5 @@ mongoose
   })
   .then(() => console.log("MongoDB connecting Success!!"))
   .catch((e) => console.log(e));
-
-if (prod) {
-  app.use(express.static(path));
-}
 
 export default app;
