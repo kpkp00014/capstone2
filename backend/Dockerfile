@@ -1,4 +1,4 @@
-FROM node:14.15.0
+FROM node:12.18.0
 RUN  apt-get update \
     && apt-get install -y wget gnupg ca-certificates \
     && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
