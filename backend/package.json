@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -L server.js --exec babel-node",
-    "build": "babel . --ignore node_modules,build --out-dir build"
+    "build": "babel . --ignore node_modules,build --out-dir build",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

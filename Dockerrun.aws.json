@@ -10,7 +10,7 @@
         "name": "backend",
         "image": "kpkp00014/vsc-backend",
         "hostname": "backend",
-        "essential": false,
+        "essential": true,
         "memory": 128
     }, {
         "name": "nginx",
