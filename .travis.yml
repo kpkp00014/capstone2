@@ -13,9 +13,9 @@ script:
 
 after_success:
   - echo "start Creating an image with dockerfile"
-  - docker build -t kpkp00014/vsc-frontend:1.2 ./frontend
-  - docker build -t kpkp00014/vsc-backend:1.2 ./backend
-  - docker build -t kpkp00014/vsc-nginx:1.2 ./nginx
+  - docker build -t kpkp00014/vsc-frontend:2.0 ./frontend
+  - docker build -t kpkp00014/vsc-backend:2.0 ./backend
+  - docker build -t kpkp00014/vsc-nginx:2.0 ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
