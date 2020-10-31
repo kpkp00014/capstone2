@@ -20,7 +20,7 @@ import { STORAGE_IMAGE_DELETE_REQUEST } from "../../redux/types";
 import {
   REACT_APP_DEFAULT_FOLDER_URL,
   REACT_APP_DEFAULT_IMAGE_URL,
-} from "../../../config";
+} from "../../config";
 dotenv.config();
 
 const StorageItemOne = ({ files }) => {

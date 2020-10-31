@@ -12,7 +12,7 @@ import {
   STORAGE_LOADING_REQUEST,
   PROJECT_ITEM_UPLOAD_REQUEST,
 } from "../../redux/types";
-import { REACT_APP_DEFAULT_IMAGE_URL } from "../../../config";
+import { REACT_APP_DEFAULT_IMAGE_URL } from "../../config";
 const ProjectModalStorage = () => {
   const [modal, setModal] = useState(false);
   const [form, setValues] = useState("");
