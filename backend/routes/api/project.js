@@ -161,7 +161,11 @@ router.post("/export", auth, async (req, res) => {
   console.log("EXPORTIMAGE before nodeHTMLTOIMAGE");
   const image = await nodeHtmlToImage({
     html: html,
-    puppeteerArgs: { args: ["--no-sandbox", "--disable-setuid-sandbox"] },
+    puppeteerArgs: {
+      executablePath: "/usr/bin/google-chrome-stable",
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    },
   });
   console.log("SUCCESS nodeHTMLTOIMAGE");
   let param = {
