@@ -1,17 +1,14 @@
 import express from "express";
-
-import dotenv from "dotenv";
-dotenv.config();
 import { isNullOrUndefined } from "util";
 import auth from "../../middleware/auth";
 import uploadS3 from "../../middleware/uploadS3";
-
+import { AWS_KEY, AWS_PRIVATE_KEY } from "../../config";
 const router = express.Router();
 
 const AWS = require("aws-sdk");
 const s3 = new AWS.S3({
-  accessKeyId: process.env.AWS_KEY,
-  secretAccessKey: process.env.AWS_PRIVATE_KEY,
+  accessKeyId: AWS_KEY,
+  secretAccessKey: AWS_PRIVATE_KEY,
   region: "ap-northeast-2",
 });
 

@@ -2,10 +2,11 @@ import moment from "moment";
 import path from "path";
 import multer from "multer";
 import multerS3 from "multer-s3";
+import { AWS_KEY, AWS_PRIVATE_KEY } from "../config";
 const AWS = require("aws-sdk");
 const s3 = new AWS.S3({
-  accessKeyId: process.env.AWS_KEY,
-  secretAccessKey: process.env.AWS_PRIVATE_KEY,
+  accessKeyId: AWS_KEY,
+  secretAccessKey: AWS_PRIVATE_KEY,
   region: "ap-northeast-2",
 });
 
