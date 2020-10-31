@@ -160,11 +160,12 @@ router.post("/export", auth, async (req, res) => {
   const filepath = `${req.user.id}/ProjectResult_${moment().format(
     "YYMMDDhhmmss"
   )}.png`;
-  console.log("html: ", html);
+  console.log("EXPORTIMAGE before nodeHTMLTOIMAGE");
   const image = await nodeHtmlToImage({
     html: html,
     puppeteerArgs: { args: ["--no-sandbox", "--disable-setuid-sandbox"] },
   });
+  console.log("SUCCESS nodeHTMLTOIMAGE");
   let param = {
     Bucket: "xcezsimplestorage",
     ACL: "public-read",
