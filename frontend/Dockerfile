@@ -1,6 +1,5 @@
 FROM node:12.18.0 as builder
 WORKDIR /app
-COPY ./package.json ./
 ###########################################################################
 # PYTHON:
 ###########################################################################
@@ -13,6 +12,7 @@ RUN if [ ${INSTALL_PYTHON} = true ]; then \
     && python -m pip install --upgrade virtualenv \
     ;fi
 
+COPY ./package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
