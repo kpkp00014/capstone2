@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -L server.js --exec babel-node",
     "build": "babel . --ignore node_modules,build --out-dir build",
-    "start": "node server.js"
+    "start": "node server.js --exec babel-node"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +29,14 @@
     "node-html-to-image": "^3.1.0",
     "path": "^0.12.7",
     "puppeteer": "^5.4.1",
-    "puppeteer-cluster": "^0.22.0"
+    "puppeteer-cluster": "^0.22.0",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
