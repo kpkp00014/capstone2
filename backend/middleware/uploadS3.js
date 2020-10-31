@@ -18,6 +18,7 @@ const uploadS3 = multer({
     acl: "public-read",
     key(req, file, cb) {
       const ext = path.extname(file.originalname);
+      console.log(AWS_KEY, "if aws_key is undefined?");
       cb(null, req.user.id + "/" + moment().format("YYYYMMDDhhmmss") + ext);
     },
   }),

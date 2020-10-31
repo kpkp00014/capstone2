@@ -16,7 +16,6 @@ const s3 = new AWS.S3({
 // @desc    get aws s3 object list
 // @access  Public
 router.get("/", auth, (req, res) => {
-  console.log(AWS_KEY.length, "AWSKEY length");
   var params = {
     Bucket: "xcezsimplestorage",
     Delimiter: "",

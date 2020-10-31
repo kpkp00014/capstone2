@@ -161,6 +161,9 @@ router.post("/export", auth, async (req, res) => {
   console.log("EXPORTIMAGE before nodeHTMLTOIMAGE");
   const image = await nodeHtmlToImage({
     html: html,
+    beforeScreenshot: () => {
+      console.log("doing screenshot");
+    },
     puppeteerArgs: {
       executablePath: "/usr/bin/google-chrome-stable",
       headless: true,
