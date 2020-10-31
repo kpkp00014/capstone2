@@ -12,7 +12,6 @@ import {
   Row,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import dotenv from "dotenv";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
@@ -21,7 +20,7 @@ import {
   REACT_APP_DEFAULT_FOLDER_URL,
   REACT_APP_DEFAULT_IMAGE_URL,
 } from "../../config";
-dotenv.config();
+
 const StorageItemOne = ({ files }) => {
   const [modal, setModal] = useState(false);
   const [modalImg, setModalImg] = useState("");

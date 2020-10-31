@@ -1,9 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Button, CustomInput } from "reactstrap";
-import dotenv from "dotenv";
 import { useDispatch } from "react-redux";
 import { FILE_UPLOAD_REQUEST } from "../../redux/types";
-dotenv.config();
 
 const StorageItemUpload = () => {
   const [form, setValues] = useState({ file: "" });
