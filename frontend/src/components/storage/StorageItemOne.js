@@ -17,12 +17,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { STORAGE_IMAGE_DELETE_REQUEST } from "../../redux/types";
-import {
-  REACT_APP_DEFAULT_FOLDER_URL,
-  REACT_APP_DEFAULT_IMAGE_URL,
-} from "../../config";
+import config from "../../config";
 dotenv.config();
-
+const { REACT_APP_DEFAULT_FOLDER_URL, REACT_APP_DEFAULT_IMAGE_URL } = config;
 const StorageItemOne = ({ files }) => {
   const [modal, setModal] = useState(false);
   const [modalImg, setModalImg] = useState("");
