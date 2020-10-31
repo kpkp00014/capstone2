@@ -160,6 +160,7 @@ router.post("/export", auth, async (req, res) => {
   const filepath = `${req.user.id}/ProjectResult_${moment().format(
     "YYMMDDhhmmss"
   )}.png`;
+  console.log("html: ", html);
   const image = await nodeHtmlToImage({
     html: html,
     puppeteerArgs: { args: ["--no-sandbox", "--disable-setuid-sandbox"] },

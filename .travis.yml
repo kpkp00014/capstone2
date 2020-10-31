@@ -19,9 +19,9 @@ after_success:
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
-  - docker push kpkp00014/vsc-frontend:1.2
-  - docker push kpkp00014/vsc-backend:1.2
-  - docker push kpkp00014/vsc-nginx:1.2
+  - docker push kpkp00014/vsc-frontend:1.3
+  - docker push kpkp00014/vsc-backend:1.3
+  - docker push kpkp00014/vsc-nginx:1.3
 
 deploy:
   provider: elasticbeanstalk
