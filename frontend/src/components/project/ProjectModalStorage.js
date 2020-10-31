@@ -12,7 +12,7 @@ import {
   STORAGE_LOADING_REQUEST,
   PROJECT_ITEM_UPLOAD_REQUEST,
 } from "../../redux/types";
-
+import { REACT_APP_DEFAULT_IMAGE_URL } from "../../../config";
 const ProjectModalStorage = () => {
   const [modal, setModal] = useState(false);
   const [form, setValues] = useState("");
@@ -50,7 +50,7 @@ const ProjectModalStorage = () => {
     e.preventDefault();
     if (form === "") return alert("내용을 선택해주세요");
     const body = {
-      content: process.env.REACT_APP_DEFAULT_IMAGE_URL + form,
+      content: REACT_APP_DEFAULT_IMAGE_URL + form,
       isImage: true,
       token: localStorage.getItem("token"),
       project: project,
@@ -84,7 +84,7 @@ const ProjectModalStorage = () => {
                       >
                         <img
                           alt="이미지"
-                          src={process.env.REACT_APP_DEFAULT_IMAGE_URL + Key}
+                          src={REACT_APP_DEFAULT_IMAGE_URL + Key}
                           className="modalImgPopup"
                         />
                       </div>

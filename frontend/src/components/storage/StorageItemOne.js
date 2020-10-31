@@ -17,6 +17,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { STORAGE_IMAGE_DELETE_REQUEST } from "../../redux/types";
+import {
+  REACT_APP_DEFAULT_FOLDER_URL,
+  REACT_APP_DEFAULT_IMAGE_URL,
+} from "../../../config";
 dotenv.config();
 
 const StorageItemOne = ({ files }) => {
@@ -82,7 +86,7 @@ const StorageItemOne = ({ files }) => {
                       <CardImg
                         top
                         alt="폴더"
-                        src={process.env.REACT_APP_DEFAULT_FOLDER_URL}
+                        src={REACT_APP_DEFAULT_FOLDER_URL}
                       />
                       <CardBody className="pb-0 mb-0">
                         <CardTitle className="text-truncate d-flex justify-content-between">
@@ -123,7 +127,7 @@ const StorageItemOne = ({ files }) => {
                       <CardImg
                         top
                         alt="이미지"
-                        src={process.env.REACT_APP_DEFAULT_IMAGE_URL + Key}
+                        src={REACT_APP_DEFAULT_IMAGE_URL + Key}
                       />
                       <CardBody className="pb-0 mb-0">
                         <CardTitle className="text-truncate d-flex justify-content-between">
